@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,371 +10,175 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="theme-color" content="#ffe4ef">
-
-<title>For Dr Motuuuu 💗</title>
+<title>For My Dr Motuuuu ❤️</title>
 
 <style>
 
-* {
+*{box-sizing:border-box}
 
-  box-sizing: border-box;
+html{scroll-behavior:smooth}
 
-}
+body{
 
-html {
+ margin:0;
 
-  min-height: 100%;
+ min-height:100vh;
 
-  overflow-x: hidden;
+ overflow-x:hidden;
 
-  scroll-behavior: smooth;
+ overflow-y:auto;
 
-}
+ font-family:"Trebuchet MS",Arial,sans-serif;
 
-body {
+ color:#873b5d;
 
-  margin: 0;
+ background:linear-gradient(145deg,#fff3f8,#ffc6df,#fff0f6);
 
-  min-height: 100vh;
-
-  min-height: 100svh;
-
-  overflow-x: hidden;
-
-  overflow-y: auto;
-
-  font-family: "Trebuchet MS", Arial, sans-serif;
-
-  color: #74334c;
-
-  background: linear-gradient(145deg, #fff5fa, #ffdce9, #ffc5dc);
+ text-align:center;
 
 }
 
-.glow {
+.wrap{
 
-  position: fixed;
+ width:min(94%,480px);
 
-  inset: 0;
+ margin:35px auto;
 
-  pointer-events: none;
+ padding:15px 0 60px;
 
-  background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.7), transparent 65%);
+ position:relative;
 
-  z-index: 0;
-
-}
-
-.heart {
-
-  position: fixed;
-
-  bottom: -45px;
-
-  color: #ed77a5;
-
-  opacity: .65;
-
-  animation: float linear infinite;
-
-  pointer-events: none;
-
-  z-index: 1;
+ z-index:2;
 
 }
 
-@keyframes float {
+.card{
 
-  to {
+ background:rgba(255,255,255,.91);
 
-    transform: translateY(-115vh) rotate(25deg);
+ border:1px solid white;
 
-    opacity: 0;
+ border-radius:28px;
 
-  }
+ padding:32px 22px;
 
-}
+ margin-bottom:24px;
 
-.wrap {
-
-  width: min(92vw, 480px);
-
-  min-height: 100vh;
-
-  min-height: 100svh;
-
-  margin: 0 auto;
-
-  padding: 24px 0;
-
-  position: relative;
-
-  z-index: 2;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+ box-shadow:0 15px 45px #c64e8020;
 
 }
 
-.card {
+.tiny{
 
-  width: 100%;
+ letter-spacing:3px;
 
-  background: rgba(255,255,255,.88);
+ color:#d16a91;
 
-  border: 1px solid white;
-
-  border-radius: 30px;
-
-  padding: 32px 23px;
-
-  text-align: center;
-
-  box-shadow: 0 20px 65px rgba(166,57,101,.17);
-
-  backdrop-filter: blur(12px);
-
-  margin: 0;
+ font-size:13px;
 
 }
 
-.tiny {
+.emoji{font-size:55px;margin:20px}
 
-  font-size: 12px;
+h1{
 
-  letter-spacing: 3px;
+ font-family:Georgia,serif;
 
-  text-transform: uppercase;
+ color:#c13f77;
 
-  color: #d36b91;
+ font-size:clamp(32px,8vw,44px);
 
-}
-
-.emoji {
-
-  display: block;
-
-  font-size: 55px;
-
-  margin: 20px 0;
-
-  filter: drop-shadow(0 5px 8px #f6c1d5);
+ line-height:1.15;
 
 }
 
-h1 {
+p{
 
-  font-family: Georgia, serif;
+ font-family:Georgia,serif;
 
-  font-size: clamp(34px, 9vw, 46px);
+ font-size:19px;
 
-  line-height: 1.12;
-
-  color: #b64170;
-
-  margin: 18px 0;
+ line-height:1.7;
 
 }
 
-p {
+button{
 
-  font-size: 17px;
+ display:block;
 
-  line-height: 1.7;
+ width:100%;
 
-}
+ border:0;
 
-.message {
+ border-radius:50px;
 
-  font-family: Georgia, serif;
+ padding:17px 12px;
 
-  font-size: 19px;
+ margin:15px auto;
 
-  line-height: 1.75;
+ font-size:17px;
 
-  color: #8e3d5c;
+ font-weight:bold;
 
-  text-align: center;
+ color:white;
 
-  margin-top: 25px;
+ background:linear-gradient(120deg,#f47eaa,#d94b85);
 
-}
+ box-shadow:0 8px 20px #d94b8530;
 
-.signature {
-
-  font-family: Georgia, serif;
-
-  font-size: 25px;
-
-  line-height: 1.4;
-
-  font-weight: bold;
-
-  color: #c13e75;
-
-  margin-top: 28px;
+ cursor:pointer;
 
 }
 
-.sparkle {
+.secondary{
 
-  font-size: 24px;
+ background:#fff0f6;
 
-  margin: 18px 0;
+ color:#b64170;
 
-  letter-spacing: 7px;
+ border:2px solid #ffd1e2;
 
-}
-
-button {
-
-  display: block;
-
-  width: 100%;
-
-  border: 0;
-
-  border-radius: 999px;
-
-  padding: 16px 18px;
-
-  font-size: 16px;
-
-  font-weight: bold;
-
-  cursor: pointer;
-
-  margin: 13px auto;
-
-  background: linear-gradient(135deg, #f27aa7, #d94f83);
-
-  color: white;
-
-  box-shadow: 0 9px 22px rgba(217,79,131,.25);
+ box-shadow:none;
 
 }
 
-button:active {
+.hidden{display:none!important}
 
-  transform: scale(.97);
+.signature{
 
-}
+ font-size:27px;
 
-.secondary {
+ font-weight:bold;
 
-  background: #fff0f6;
+ color:#c13f77;
 
-  color: #b64170;
-
-  border: 1px solid #ffd1e2;
-
-  box-shadow: none;
+ margin:28px 0;
 
 }
 
-.hidden {
+.small{font-size:14px;color:#bd7893}
 
-  display: none !important;
+.heart{
 
-}
+ position:fixed;
 
-.small {
+ bottom:-30px;
 
-  font-size: 13px;
+ pointer-events:none;
 
-  color: #b36c88;
+ animation:float 9s linear infinite;
 
-  margin-top: 20px;
+ opacity:.5;
 
-  line-height: 1.6;
-
-}
-
-.pop {
-
-  animation: pop .55s ease both;
+ z-index:1;
 
 }
 
-@keyframes pop {
+@keyframes float{
 
-  from {
-
-    transform: scale(.94);
-
-    opacity: 0;
-
-  }
-
-  to {
-
-    transform: scale(1);
-
-    opacity: 1;
-
-  }
-
-}
-
-.burst {
-
-  position: fixed;
-
-  z-index: 5;
-
-  pointer-events: none;
-
-  font-size: 25px;
-
-  animation: burst 1.5s ease-out forwards;
-
-}
-
-@keyframes burst {
-
-  from {
-
-    transform: translate(0,0) scale(.5);
-
-    opacity: 1;
-
-  }
-
-  to {
-
-    transform: translate(var(--x),var(--y)) scale(1.5);
-
-    opacity: 0;
-
-  }
-
-}
-
-#reply {
-
-  min-height: 45px;
-
-}
-
-@media(max-width:380px) {
-
-  .card {
-
-    padding: 27px 18px;
-
-  }
-
-  .message {
-
-    font-size: 17px;
-
-  }
+ to{transform:translateY(-115vh) rotate(30deg);opacity:0}
 
 }
 
@@ -382,215 +188,177 @@ button:active {
 
 <body>
 
-<div class="glow"></div>
+<div class="wrap">
 
-<main class="wrap">
+<section class="card" id="start">
 
-  <section class="card" id="start">
+<div class="tiny">A LITTLE SURPRISE FOR YOU</div>
 
-    <div class="tiny">A little surprise for you</div>
+<div class="emoji">💌</div>
 
-    <span class="emoji">💌</span>
+<h1>Hey Dr Motuuuu!</h1>
 
-    <h1>Hey Dr motuuuu!</h1>
+<p>Ek chhoti si baat hai babu... 🥺<br>
 
-    <p>
+Please smile karte hue open karna.</p>
 
-      Ek chhoti si baat hai…<br>
+<button onclick="showNote()">Open my letter 💗</button>
 
-      please bina smile kiye mat jaana. 🥺
+<div class="small">Made with all my love ❤️</div>
 
-    </p>
+</section>
 
-    <button onclick="openNote()">
+<section class="card hidden" id="note">
 
-      Open my little note 💗
+<div class="tiny">FROM MY HEART TO YOURS</div>
 
-    </button>
+<div class="emoji">🥺❤️</div>
 
-    <div class="small">
+<h1>I'm really sorry, motuuuu.</h1>
 
-      Made with lots of love, just for you ❤️
+<p>
 
-    </div>
+I know I may have hurt you, and I'm genuinely sorry for everything.
 
-  </section>
+You deserve care, time, patience and love.
 
-  <section class="card hidden" id="note">
+<br><br>
 
-    <div class="tiny">From my heart to yours</div>
+I can't undo what happened, but I can learn from it.
 
-    <span class="emoji">🥺❤️</span>
+I want to listen better, understand you more,
 
-    <h1>I'm really sorry, motuuuu.</h1>
+and show you through my actions how much you mean to me.
 
-    <div class="message">
+<br><br>
 
-      I know I may have hurt you, and I'm genuinely sorry for everything.
+Please don't ever think that you are not special to me.
 
-      You deserve care, time, patience and love — not reasons to feel upset.
+You are my favourite person. 💗
 
-      <br><br>
+<br><br>
 
-      I can't undo what happened, but I can learn from it.
+Your feelings matter to me, always.
 
-      I want to listen better, understand you more, and show you through my actions
+</p>
 
-      how much you mean to me.
+<div class="signature">I love you meri motuuuu ❤️</div>
 
-      <br><br>
+<button onclick="forgive()">Okay... I forgive you 💞</button>
 
-      Please don't think for a second that you are not special to me.
+<button class="secondary" onclick="time()">I need a little time 🥺</button>
 
-      You are my favourite person. 💗
+<p id="reply">Whatever you feel, I'll respect it. ❤️</p>
 
-      <br><br>
+<button onclick="showSurprise()">One last surprise for you 🎁</button>
 
-      I know saying sorry is not enough.
+</section>
 
-      I want to make things better, not just with words but with my actions.
+<section class="card hidden" id="surprise">
 
-      Your feelings matter to me, always.
+<div class="emoji">🧸💗</div>
 
-    </div>
+<div class="tiny">JUST FOR MY BABY</div>
 
-    <div class="signature">
+<h1>My favourite girl!</h1>
 
-      I love you meri motuuuu ❤️
+<p>
 
-    </div>
+Agar mujhe dobara choose karne ka chance mile,
 
-    <div class="sparkle">♡ ✨ ♡</div>
+toh main har baar tumhe hi choose karunga.
 
-    <button onclick="forgive()">
+<br><br>
 
-      Okay… I forgive you 💞
+Not because everything is perfect,
 
-    </button>
+but because you are special to me.
 
-    <button class="secondary" onclick="notYet()">
+<br><br>
 
-      I need a little time
+I don't promise to be perfect.
 
-    </button>
+I promise to keep trying, keep understanding,
 
-    <div class="small" id="reply">
+and keep loving you. 🥹
 
-      Whatever you feel, I'll respect it. ❤️
+</p>
 
-    </div>
+<div class="signature">Forever my Dr Motuuuu 💋</div>
 
-    <div class="small">
+<div class="emoji">❤️🫂❤️</div>
 
-      Made with all my love, just for you. 💗
+<p>One tight hug from me to you!</p>
 
-    </div>
+<button onclick="topFunction()">Read it again 💗</button>
 
-  </section>
+</section>
 
-</main>
+<p class="small">Made with all my love, just for you. 💖</p>
+
+</div>
 
 <script>
 
-function openNote() {
+function showNote(){
 
-  document.getElementById('start').classList.add('hidden');
+ document.getElementById("start").classList.add("hidden");
 
-  const note = document.getElementById('note');
+ document.getElementById("note").classList.remove("hidden");
 
-  note.classList.remove('hidden');
-
-  note.classList.add('pop');
-
-  window.scrollTo({top: 0, behavior: 'smooth'});
-
-  burstHearts();
+ window.scrollTo(0,0);
 
 }
 
-function forgive() {
+function forgive(){
 
-  document.getElementById('reply').textContent =
+ document.getElementById("reply").innerText=
 
-    "You just made my whole day. I promise to keep showing you love. 🥹❤️";
-
-  burstHearts();
+ "You made me the happiest person. I love you so much babu! 🥹❤️";
 
 }
 
-function notYet() {
+function time(){
 
-  document.getElementById('reply').textContent =
+ document.getElementById("reply").innerText=
 
-    "It's okay, take your time. I'll listen whenever you're ready. ❤️";
-
-}
-
-function burstHearts() {
-
-  const symbols = ['💗','💕','💖','❤️','✨'];
-
-  for(let i = 0; i < 24; i++) {
-
-    const heart = document.createElement('span');
-
-    heart.className = 'burst';
-
-    heart.textContent =
-
-      symbols[Math.floor(Math.random() * symbols.length)];
-
-    heart.style.left = (window.innerWidth / 2) + 'px';
-
-    heart.style.top = (window.innerHeight / 2) + 'px';
-
-    heart.style.setProperty(
-
-      '--x',
-
-      (Math.random() * 440 - 220) + 'px'
-
-    );
-
-    heart.style.setProperty(
-
-      '--y',
-
-      (Math.random() * -520 - 40) + 'px'
-
-    );
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 1600);
-
-  }
+ "Take all the time you need. I'll respect your feelings and listen whenever you're ready. ❤️";
 
 }
 
-for(let i = 0; i < 18; i++) {
+function showSurprise(){
 
-  const heart = document.createElement('span');
+ document.getElementById("surprise").classList.remove("hidden");
 
-  heart.className = 'heart';
+ setTimeout(()=>{
 
-  heart.textContent = ['♥','♡','❤'][i % 3];
+ document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
 
-  heart.style.left = (Math.random() * 100) + 'vw';
+ },100);
 
-  heart.style.animationDuration =
+}
 
-    (7 + Math.random() * 9) + 's';
+function topFunction(){
 
-  heart.style.animationDelay =
+ window.scrollTo({top:0,behavior:"smooth"});
 
-    (-Math.random() * 12) + 's';
+}
 
-  heart.style.fontSize =
+for(let i=0;i<18;i++){
 
-    (14 + Math.random() * 22) + 'px';
+ let h=document.createElement("div");
 
-  document.body.appendChild(heart);
+ h.className="heart";
+
+ h.innerText=["♥","♡","💗","💕"][i%4];
+
+ h.style.left=Math.random()*100+"vw";
+
+ h.style.animationDelay=(-Math.random()*10)+"s";
+
+ h.style.fontSize=(18+Math.random()*20)+"px";
+
+ document.body.appendChild(h);
 
 }
 
