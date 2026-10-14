@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Dr Motuuuu 💗</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; overflow:hidden; display:grid; place-items:center;
+    font-family: "Trebuchet MS", Arial, sans-serif; color:#74334c;
+    background:radial-gradient(circle at 20% 15%,#fff7fb 0,#ffe4ef 38%,#ffc5dc 100%);
+  }
+  .glow{position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.65),transparent 55%)}
+  .heart{position:fixed;bottom:-40px;color:#f06b9e;opacity:.65;animation:float linear infinite;pointer-events:none}
+  @keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+  .wrap{width:min(92vw,480px);position:relative;z-index:2;text-align:center;padding:24px}
+  .card{
+    background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.9);
+    border-radius:30px;padding:34px 25px 30px;box-shadow:0 22px 70px rgba(166,57,101,.18);
+    backdrop-filter:blur(10px);transition:all .5s ease;
+  }
+  .tiny{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#d36b91}
+  h1{font-family:Georgia,serif;font-size:clamp(34px,9vw,48px);line-height:1.08;margin:15px 0;color:#b64170}
+  p{font-size:17px;line-height:1.65;margin:12px 0}
+  .emoji{font-size:52px;margin:8px 0 15px;display:block;filter:drop-shadow(0 5px 8px #f6c1d5)}
+  button{
+    border:0;border-radius:999px;padding:15px 24px;font-size:16px;font-weight:700;
+    cursor:pointer;transition:transform .2s,box-shadow .2s;background:linear-gradient(135deg,#f27aa7,#d94f83);
+    color:white;box-shadow:0 9px 22px rgba(217,79,131,.25);margin:9px 5px;
+  }
+  button:hover{transform:translateY(-3px);box-shadow:0 13px 25px rgba(217,79,131,.32)}
+  .secondary{background:#fff0f6;color:#b64170;box-shadow:none;border:1px solid #ffd1e2}
+  .hidden{display:none}
+  .message{font-family:Georgia,serif;font-size:20px;line-height:1.65;color:#8e3d5c}
+  .signature{font-family:Georgia,serif;font-size:25px;font-weight:bold;color:#c13e75;margin-top:20px}
+  .sparkle{font-size:22px;letter-spacing:8px;margin-top:14px}
+  .small{font-size:13px;color:#b36c88;margin-top:18px}
+  .pop{animation:pop .55s ease both}
+  @keyframes pop{0%{transform:scale(.85);opacity:0}100%{transform:scale(1);opacity:1}}
+  .burst{position:fixed;z-index:5;pointer-events:none;font-size:24px;animation:burst 1.5s ease-out forwards}
+  @keyframes burst{0%{transform:translate(0,0) scale(.5);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.5);opacity:0}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<main class="wrap">
+  <section class="card" id="start">
+    <div class="tiny">A little surprise for you</div>
+    <span class="emoji">💌</span>
+    <h1>Hey Dr motuuuu!</h1>
+    <p>Ek chhoti si baat hai…<br>please bina smile kiye mat jaana. 🥺</p>
+    <button onclick="openNote()">Open my little note 💗</button>
+    <div class="small">Made with lots of love, just for you</div>
+  </section>
+
+  <section class="card hidden" id="note">
+    <div class="tiny">From my heart to yours</div>
+    <span class="emoji">🥺❤️</span>
+    <h1>I'm really sorry, motuuuu.</h1>
+    <p class="message">
+      I know I may have hurt you, and I'm genuinely sorry for everything.
+      You deserve care, time, patience and love — not reasons to feel upset.
+      <br><br>
+      I can't undo what happened, but I can learn from it.
+      I want to listen better, understand you more, and show you through my actions
+      how much you mean to me.
+      <br><br>
+      Please don't think for a second that you are not special to me.
+      You are my favourite person. 💗
+    </p>
+    <div class="signature">I love you meri motuuuu ❤️</div>
+    <div class="sparkle">♡ ✨ ♡</div>
+    <button onclick="forgive()">Okay… I forgive you 💞</button>
+    <button class="secondary" onclick="notYet()">I need a little time</button>
+    <div class="small" id="reply">Whatever you feel, I'll respect it. ❤️</div>
+  </section>
+</main>
+<script>
+  function openNote(){
+    document.getElementById('start').classList.add('hidden');
+    const n=document.getElementById('note'); n.classList.remove('hidden'); n.classList.add('pop');
+    burstHearts();
+  }
+  function forgive(){
+    document.getElementById('reply').textContent="You just made my whole day. I promise to keep showing you love. 🥹❤️";
+    burstHearts();
+  }
+  function notYet(){
+    document.getElementById('reply').textContent="It's okay, take your time. I'll listen whenever you're ready. ❤️";
+  }
+  function burstHearts(){
+    const symbols=['💗','💕','💖','❤️','✨'];
+    for(let i=0;i<24;i++){
+      const e=document.createElement('span');e.className='burst';
+      e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+      e.style.left=(window.innerWidth/2)+'px';e.style.top=(window.innerHeight/2)+'px';
+      e.style.setProperty('--x',(Math.random()*440-220)+'px');
+      e.style.setProperty('--y',(Math.random()*-520-40)+'px');
+      document.body.appendChild(e);setTimeout(()=>e.remove(),1600);
+    }
+  }
+  for(let i=0;i<18;i++){
+    const h=document.createElement('span');h.className='heart';h.textContent=['♥','♡','❤'][i%3];
+    h.style.left=(Math.random()*100)+'vw';h.style.animationDuration=(7+Math.random()*9)+'s';
+    h.style.animationDelay=(-Math.random()*12)+'s';h.style.fontSize=(14+Math.random()*22)+'px';
+    document.body.appendChild(h);
+  }
+</script>
+</body>
+</html>
