@@ -1,189 +1,96 @@
 
-
-
-
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>For My Dr Motuuuu ❤️</title>
 
 <style>
-
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{
-
  margin:0;
-
  min-height:100vh;
-
  overflow-x:hidden;
-
  overflow-y:auto;
-
  font-family:"Trebuchet MS",Arial,sans-serif;
-
  color:#873b5d;
-
  background:linear-gradient(145deg,#fff3f8,#ffc6df,#fff0f6);
-
  text-align:center;
-
 }
-
 .wrap{
-
  width:min(94%,480px);
-
  margin:35px auto;
-
  padding:15px 0 60px;
-
  position:relative;
-
  z-index:2;
-
 }
-
 .card{
-
  background:rgba(255,255,255,.91);
-
  border:1px solid white;
-
  border-radius:28px;
-
  padding:32px 22px;
-
  margin-bottom:24px;
-
  box-shadow:0 15px 45px #c64e8020;
-
 }
-
 .tiny{
-
  letter-spacing:3px;
-
  color:#d16a91;
-
  font-size:13px;
-
 }
-
 .emoji{font-size:55px;margin:20px}
-
 h1{
-
  font-family:Georgia,serif;
-
  color:#c13f77;
-
  font-size:clamp(32px,8vw,44px);
-
  line-height:1.15;
-
 }
-
 p{
-
  font-family:Georgia,serif;
-
  font-size:19px;
-
  line-height:1.7;
-
 }
-
 button{
-
  display:block;
-
  width:100%;
-
  border:0;
-
  border-radius:50px;
-
  padding:17px 12px;
-
  margin:15px auto;
-
  font-size:17px;
-
  font-weight:bold;
-
  color:white;
-
  background:linear-gradient(120deg,#f47eaa,#d94b85);
-
  box-shadow:0 8px 20px #d94b8530;
-
  cursor:pointer;
-
 }
-
 .secondary{
-
  background:#fff0f6;
-
  color:#b64170;
-
  border:2px solid #ffd1e2;
-
  box-shadow:none;
-
 }
-
 .hidden{display:none!important}
-
 .signature{
-
  font-size:27px;
-
  font-weight:bold;
-
  color:#c13f77;
-
  margin:28px 0;
-
 }
-
 .small{font-size:14px;color:#bd7893}
-
 .heart{
-
  position:fixed;
-
  bottom:-30px;
-
  pointer-events:none;
-
  animation:float 9s linear infinite;
-
  opacity:.5;
-
  z-index:1;
-
 }
-
 @keyframes float{
-
  to{transform:translateY(-115vh) rotate(30deg);opacity:0}
-
 }
-
 </style>
-
 </head>
 
 <body>
@@ -191,107 +98,63 @@ button{
 <div class="wrap">
 
 <section class="card" id="start">
-
 <div class="tiny">A LITTLE SURPRISE FOR YOU</div>
-
 <div class="emoji">💌</div>
-
 <h1>Hey Dr Motuuuu!</h1>
-
 <p>Ek chhoti si baat hai babu... 🥺<br>
-
 Please smile karte hue open karna.</p>
-
 <button onclick="showNote()">Open my letter 💗</button>
-
 <div class="small">Made with all my love ❤️</div>
-
 </section>
 
 <section class="card hidden" id="note">
-
 <div class="tiny">FROM MY HEART TO YOURS</div>
-
 <div class="emoji">🥺❤️</div>
-
 <h1>I'm really sorry, motuuuu.</h1>
 
 <p>
-
 I know I may have hurt you, and I'm genuinely sorry for everything.
-
 You deserve care, time, patience and love.
-
 <br><br>
-
 I can't undo what happened, but I can learn from it.
-
 I want to listen better, understand you more,
-
 and show you through my actions how much you mean to me.
-
 <br><br>
-
 Please don't ever think that you are not special to me.
-
 You are my favourite person. 💗
-
 <br><br>
-
 Your feelings matter to me, always.
-
 </p>
 
 <div class="signature">I love you meri motuuuu ❤️</div>
 
 <button onclick="forgive()">Okay... I forgive you 💞</button>
-
 <button class="secondary" onclick="time()">I need a little time 🥺</button>
 
 <p id="reply">Whatever you feel, I'll respect it. ❤️</p>
 
 <button onclick="showSurprise()">One last surprise for you 🎁</button>
-
 </section>
 
 <section class="card hidden" id="surprise">
-
 <div class="emoji">🧸💗</div>
-
 <div class="tiny">JUST FOR MY BABY</div>
-
 <h1>My favourite girl!</h1>
-
 <p>
-
 Agar mujhe dobara choose karne ka chance mile,
-
 toh main har baar tumhe hi choose karunga.
-
 <br><br>
-
 Not because everything is perfect,
-
 but because you are special to me.
-
 <br><br>
-
 I don't promise to be perfect.
-
 I promise to keep trying, keep understanding,
-
 and keep loving you. 🥹
-
 </p>
-
 <div class="signature">Forever my Dr Motuuuu 💋</div>
-
 <div class="emoji">❤️🫂❤️</div>
-
 <p>One tight hug from me to you!</p>
-
 <button onclick="topFunction()">Read it again 💗</button>
-
 </section>
 
 <p class="small">Made with all my love, just for you. 💖</p>
@@ -299,71 +162,43 @@ and keep loving you. 🥹
 </div>
 
 <script>
-
 function showNote(){
-
  document.getElementById("start").classList.add("hidden");
-
  document.getElementById("note").classList.remove("hidden");
-
  window.scrollTo(0,0);
-
 }
-
 function forgive(){
-
  document.getElementById("reply").innerText=
-
  "You made me the happiest person. I love you so much babu! 🥹❤️";
-
 }
-
 function time(){
-
  document.getElementById("reply").innerText=
-
  "Take all the time you need. I'll respect your feelings and listen whenever you're ready. ❤️";
-
 }
-
 function showSurprise(){
-
  document.getElementById("surprise").classList.remove("hidden");
-
  setTimeout(()=>{
-
  document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
-
  },100);
-
 }
-
 function topFunction(){
-
  window.scrollTo({top:0,behavior:"smooth"});
-
 }
-
 for(let i=0;i<18;i++){
-
  let h=document.createElement("div");
-
  h.className="heart";
-
  h.innerText=["♥","♡","💗","💕"][i%4];
-
  h.style.left=Math.random()*100+"vw";
-
  h.style.animationDelay=(-Math.random()*10)+"s";
-
  h.style.fontSize=(18+Math.random()*20)+"px";
-
  document.body.appendChild(h);
-
 }
-
 </script>
-
 </body>
-
 </html>
+
+
+
+
+
+
